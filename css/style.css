@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@700;800;900&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Inter", sans-serif;
+	font-weight: 800;
+}
+
+body {
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#clock {
+	font-size: 9rem;
+	width: 700px;
+	color: #221a18;
+}
+
+/* Animation background */
+
+body {
+	background: linear-gradient(128deg, #28d8ab, #ea4509, #229794);
+	background-size: 600% 600%;
+
+	animation: GradientAnimation 35s ease infinite;
+}
+
+@keyframes GradientAnimation {
+	0% {
+		background-position: 2% 0%;
+	}
+	50% {
+		background-position: 99% 100%;
+	}
+	100% {
+		background-position: 2% 0%;
+	}
+}
