@@ -53,7 +53,26 @@ const query = [
 
 ``index`` es generado aleatoriamente en funcion de la cantidad de elementos de ``query`` usando ``Math.random()``
 
-Para ir cambiando de imagen cada cierto tiempo y evitar el efecto de recarga de la pagina se decidio crear varios elemntos ``<div>`` y con js le asignamos una imagen a cada uno y una clase que hace que el ``z-index`` sea negativo de manera de poder ocultarlo.
+Para ir cambiando de imagen cada cierto tiempo y evitar el efecto de recarga de la pagina se decidio crear varios elemntos ``<div>`` y con js le asignamos una imagen a cada uno y una clase que hace que el ``z-index`` sea negativo de manera de poder ocultarlo. Las clases de css son:
+
+```css
+/* Divs con imagen escondida */
+
+.bg {
+	position: fixed;
+	inset: 0;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	z-index: -3;
+}
+
+.show {
+	z-index: 1;
+	transition: all ease-in-out 2s;
+}
+
+```
 
 Entonces dentro del:
 ```javascript
