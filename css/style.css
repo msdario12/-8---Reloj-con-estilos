@@ -24,26 +24,32 @@ body {
 #clock {
 	font-size: 9rem;
 	width: 700px;
-	color: #221a18;
+	z-index: 2;
+	color: rgb(32, 24, 22);
+
+	--x-offset: -0.0625em;
+	--y-offset: 0.0625em;
+	--stroke: 0.025em;
+	--background-color: white;
+	--stroke-color: lightblue;
+
+	text-shadow: var(--x-offset) var(--y-offset) 0px var(--background-color),
+		calc(var(--x-offset) - var(--stroke)) calc(var(--y-offset) + var(--stroke))
+			0px var(--stroke-color);
 }
 
-/* Animation background */
+/* Divs con imagen escondida */
 
-body {
-	background: linear-gradient(128deg, #28d8ab, #ea4509, #229794);
-	background-size: 600% 600%;
-
-	animation: GradientAnimation 35s ease infinite;
+.bg {
+	position: fixed;
+	inset: 0;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	z-index: -3;
 }
 
-@keyframes GradientAnimation {
-	0% {
-		background-position: 2% 0%;
-	}
-	50% {
-		background-position: 99% 100%;
-	}
-	100% {
-		background-position: 2% 0%;
-	}
+.show {
+	z-index: 1;
+	transition: all ease-in-out 2s;
 }
