@@ -22,8 +22,34 @@ Teniendo en cuenta el ejercicio de reloj realizado en la clase #24, se propone q
 ## Explicación
 
 Se esta usando la API de unplash para obtener imagenes en linea en funcion de un parametro de busqueda
-``https://source.unsplash.com/random/1920*1080/?${query[index]}``
+``https://source.unsplash.com/random/1920*1080/?${query[index]}``, entonces cada vez que se actualiza la pagina se busca nuevas imagenes (o aveces la misma) en funcion de las query's.
+
 Donde ``query`` es un array que contiene 20 strings que son distintas busquedas de imagenes creadas aleatoriamente.
+
+```javascript
+const query = [
+	"Beach",
+	"Mountain",
+	"Desert",
+	"Forest",
+	"Jungle",
+	"Waterfall",
+	"Skyline",
+	"Sunrise",
+	"Sunset",
+	"Canyon",
+	"Volcano",
+	"Island",
+	"Glacier",
+	"Lighthouse",
+	"River",
+	"Ocean",
+	"Lake",
+	"Cityscape",
+	"Fields",
+	`Meadow`,
+];
+```
 
 ``index`` es generado aleatoriamente en funcion de la cantidad de elementos de ``query`` usando ``Math.random()``
 
